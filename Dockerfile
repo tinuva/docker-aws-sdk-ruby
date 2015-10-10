@@ -10,6 +10,8 @@ RUN mkdir -p /var/run/sshd
 # Set password for root. We are installing Ruby as root, so need to run as root
 RUN echo "root:root" | chpasswd
 
+USER root
+
 # Standard SSH port
 EXPOSE 22
 
