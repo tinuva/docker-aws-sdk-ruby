@@ -3,7 +3,7 @@ FROM ruby:2.0
 # Copied from evarga/jenkins-slave
 # Install a basic SSH server
 RUN apt-get update -y
-RUN apt-get install -y openssh-server
+RUN apt-get install -y openssh-server postgresql-client
 RUN sed -i 's|session    required     pam_loginuid.so|session    optional     pam_loginuid.so|g' /etc/pam.d/sshd
 RUN mkdir -p /var/run/sshd
 
