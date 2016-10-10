@@ -1,3 +1,4 @@
 source 'http://rubygems.org'
 
-gem 'aws-sdk', '~> 2'
+# Need at least 2.3.2 to user awslogs driver in ECS task defs
+gem 'aws-sdk', '= 2.6.6'
