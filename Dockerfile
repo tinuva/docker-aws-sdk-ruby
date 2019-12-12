@@ -17,10 +17,6 @@ EXPOSE 22
 
 RUN sed -i -e 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
-# Set up our Ruby environment - from ruby:2.0-onbuild
-# throw errors if Gemfile has been modified since Gemfile.lock
-RUN bundle config --global frozen 1
-
 RUN mkdir -p /home/jenkins
 WORKDIR /home/jenkins
 
